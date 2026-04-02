@@ -1,14 +1,14 @@
 import { MessageSquare, Linkedin, Youtube, Twitter } from "lucide-react";
+import { Link } from "react-router-dom";
+import logo from "@/assets/logo.png";
 
 const Footer = () => (
   <footer className="pt-16 pb-16 px-6 bg-card">
     <div className="max-w-6xl mx-auto flex flex-col items-start">
-      <a href="#" className="flex items-center gap-2 mb-8 text-foreground">
-        <svg className="w-8 h-auto text-foreground drop-shadow-sm" viewBox="0 0 100 60" fill="currentColor">
-          <path d="M5 5 h20 l12.5 35 l10 -25 l10 25 l12.5 -35 h20 l-25 50 h-15 l-10 -25 l-10 25 h-15 z" />
-        </svg>
+      <Link to="/" className="flex items-center gap-2 mb-8 text-foreground">
+        <img src={logo} alt="Workomate" className="w-7 h-auto" />
         <span className="text-xl font-medium tracking-tight">Workomate</span>
-      </a>
+      </Link>
 
       <div className="skeu-card p-5 mb-8 max-w-sm w-full">
         <div className="flex items-start gap-3 mb-4">
