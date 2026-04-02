@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
+import logo from "@/assets/logo.png";
 
 interface NavbarProps {
   onBookAudit: () => void;
@@ -8,26 +10,34 @@ interface NavbarProps {
 const Navbar = ({ onBookAudit }: NavbarProps) => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
+  const navItems = [
+    { label: "Services", href: "#services" },
+    { label: "How It Works", href: "#how-it-works" },
+    { label: "Case Studies", href: "/case-studies", isRoute: true },
+    { label: "Partners", href: "#partners" },
+    { label: "FAQ", href: "#faq" },
+  ];
+
   return (
     <nav className="fixed w-full z-50 top-0 bg-card/80 backdrop-blur-xl border-b border-border shadow-sm transition-all duration-300">
       <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
-        <a href="#" className="flex items-center gap-2.5 group">
-          <svg className="w-10 h-auto text-foreground drop-shadow-sm" viewBox="0 0 100 60" fill="currentColor">
-            <path d="M5 5 h20 l12.5 35 l10 -25 l10 25 l12.5 -35 h20 l-25 50 h-15 l-10 -25 l-10 25 h-15 z" />
-          </svg>
+        <Link to="/" className="flex items-center gap-2.5 group">
+          <img src={logo} alt="Workomate" className="w-8 h-auto" />
           <span className="text-xl font-medium tracking-tight text-foreground">Workomate</span>
-        </a>
+        </Link>
 
         <div className="hidden lg:flex items-center gap-8">
-          {["Services", "How It Works", "Case Studies", "Partners", "FAQ"].map((item) => (
-            <a
-              key={item}
-              href={`#${item.toLowerCase().replace(/\s+/g, "-")}`}
-              className="text-base font-normal text-muted-foreground hover:text-foreground transition-colors"
-            >
-              {item}
-            </a>
-          ))}
+          {navItems.map((item) =>
+            item.isRoute ? (
+              <Link key={item.label} to={item.href} className="text-base font-normal text-muted-foreground hover:text-foreground transition-colors">
+                {item.label}
+              </Link>
+            ) : (
+              <a key={item.label} href={item.href} className="text-base font-normal text-muted-foreground hover:text-foreground transition-colors">
+                {item.label}
+              </a>
+            )
+          )}
         </div>
 
         <div className="flex items-center gap-4">
@@ -45,16 +55,17 @@ const Navbar = ({ onBookAudit }: NavbarProps) => {
 
       {mobileOpen && (
         <div className="lg:hidden bg-card border-t border-border px-6 py-4 flex flex-col gap-4">
-          {["Services", "How It Works", "Case Studies", "Partners", "FAQ"].map((item) => (
-            <a
-              key={item}
-              href={`#${item.toLowerCase().replace(/\s+/g, "-")}`}
-              className="text-base text-muted-foreground hover:text-foreground transition-colors"
-              onClick={() => setMobileOpen(false)}
-            >
-              {item}
-            </a>
-          ))}
+          {navItems.map((item) =>
+            item.isRoute ? (
+              <Link key={item.label} to={item.href} className="text-base text-muted-foreground hover:text-foreground transition-colors" onClick={() => setMobileOpen(false)}>
+                {item.label}
+              </Link>
+            ) : (
+              <a key={item.label} href={item.href} className="text-base text-muted-foreground hover:text-foreground transition-colors" onClick={() => setMobileOpen(false)}>
+                {item.label}
+              </a>
+            )
+          )}
           <button onClick={() => { onBookAudit(); setMobileOpen(false); }} className="btn-skeu-primary w-full text-center">
             Book a Free Audit
           </button>
