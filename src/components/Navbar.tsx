@@ -22,7 +22,7 @@ const Navbar = ({ onBookAudit }: NavbarProps) => {
     <nav className="fixed w-full z-50 top-0 bg-card/80 backdrop-blur-xl border-b border-border shadow-sm transition-all duration-300">
       <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2.5 group">
-          <img src={logo} alt="Workomate" className="w-11 h-auto" />
+          <img src={logo} alt="Workomate" className="w-14 h-auto" />
           <span className="text-xl font-medium tracking-tight text-foreground">Workomate</span>
         </Link>
 
