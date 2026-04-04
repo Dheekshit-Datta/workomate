@@ -17,25 +17,25 @@ const FAQSection = () => {
   const [openIdx, setOpenIdx] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="py-20 px-6 bg-card border-b border-border">
-      <div className="max-w-3xl mx-auto skeu-container p-10">
-        <div className="mb-8">
-          <h2 className="text-3xl md:text-4xl font-normal text-foreground tracking-tight">Frequently Asked Questions</h2>
+    <section id="faq" className="py-16 md:py-20 px-4 sm:px-6 bg-card border-b border-border">
+      <div className="max-w-3xl mx-auto skeu-container p-5 sm:p-8 md:p-10">
+        <div className="mb-6 sm:mb-8">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-normal text-foreground tracking-tight">Frequently Asked Questions</h2>
         </div>
 
         <div className="divide-y divide-muted">
           {faqs.map((faq, i) => (
-            <div key={i} className="py-5 cursor-pointer" onClick={() => setOpenIdx(openIdx === i ? null : i)}>
-              <div className="text-xl font-medium tracking-tight text-foreground flex justify-between items-center">
-                {faq.q}
-                <div className={`w-8 h-8 rounded-full border border-border shadow-sm flex items-center justify-center shrink-0 ml-4 transition-colors ${openIdx === i ? "bg-foreground text-card" : "bg-card text-foreground"}`}>
-                  <Plus className={`w-5 h-5 transition-transform duration-300 ${openIdx === i ? "rotate-45" : ""}`} strokeWidth={1.5} />
+            <div key={i} className="py-4 sm:py-5 cursor-pointer" onClick={() => setOpenIdx(openIdx === i ? null : i)}>
+              <div className="text-base sm:text-lg md:text-xl font-medium tracking-tight text-foreground flex justify-between items-center gap-3">
+                <span>{faq.q}</span>
+                <div className={`w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-border shadow-sm flex items-center justify-center shrink-0 transition-colors ${openIdx === i ? "bg-foreground text-card" : "bg-card text-foreground"}`}>
+                  <Plus className={`w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-300 ${openIdx === i ? "rotate-45" : ""}`} strokeWidth={1.5} />
                 </div>
               </div>
               <div
-                className={`overflow-hidden transition-all duration-300 ${openIdx === i ? "max-h-40 opacity-100 mt-4" : "max-h-0 opacity-0"}`}
+                className={`overflow-hidden transition-all duration-300 ${openIdx === i ? "max-h-40 opacity-100 mt-3 sm:mt-4" : "max-h-0 opacity-0"}`}
               >
-                <div className="text-base text-muted-foreground font-normal leading-relaxed pr-8">{faq.a}</div>
+                <div className="text-sm sm:text-base text-muted-foreground font-normal leading-relaxed pr-8">{faq.a}</div>
               </div>
             </div>
           ))}

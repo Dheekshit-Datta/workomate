@@ -6,27 +6,27 @@ const testimonials = [
 ];
 
 const TestimonialsSection = () => (
-  <section id="testimonials" className="py-20 px-6 bg-muted/50 border-b border-border">
+  <section id="testimonials" className="py-16 md:py-20 px-4 sm:px-6 bg-muted/50 border-b border-border">
     <div className="max-w-6xl mx-auto">
-      <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 md:mb-12 gap-4 md:gap-6">
         <div>
-          <h2 className="text-3xl md:text-4xl font-normal text-foreground tracking-tight mb-3">Customer testimonials</h2>
-          <p className="text-lg text-muted-foreground font-normal">Discover how organizations deliver AI value with Workomate.</p>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-normal text-foreground tracking-tight mb-3">Customer testimonials</h2>
+          <p className="text-base sm:text-lg text-muted-foreground font-normal">Discover how organizations deliver AI value with Workomate.</p>
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
         {testimonials.map((t) => (
-          <div key={t.company} className="skeu-card p-6 flex flex-col justify-between min-h-[280px]">
+          <div key={t.company} className="skeu-card p-5 sm:p-6 flex flex-col justify-between min-h-[240px] sm:min-h-[280px]">
             <div>
-              <div className="text-xl font-medium tracking-tight text-foreground mb-4">{t.company}</div>
-              <p className="text-sm text-muted-foreground font-normal leading-relaxed">"{t.quote}"</p>
+              <div className="text-lg sm:text-xl font-medium tracking-tight text-foreground mb-4">{t.company}</div>
+              <p className="text-xs sm:text-sm text-muted-foreground font-normal leading-relaxed">"{t.quote}"</p>
             </div>
           </div>
         ))}
       </div>
 
-      <div className="mt-10 text-center md:text-left">
+      <div className="mt-8 sm:mt-10 text-center md:text-left">
         <a href="#case-studies" className="btn-skeu-primary inline-block px-6 py-3">More Customer Stories</a>
       </div>
     </div>

@@ -3,19 +3,19 @@ import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
 
 const Footer = () => (
-  <footer className="pt-16 pb-16 px-6 bg-card">
+  <footer className="pt-12 sm:pt-16 pb-12 sm:pb-16 px-4 sm:px-6 bg-card">
     <div className="max-w-6xl mx-auto flex flex-col items-start">
-      <Link to="/" className="flex items-center gap-2 mb-8 text-foreground">
+      <Link to="/" className="flex items-center gap-2 mb-6 sm:mb-8 text-foreground">
         <img src={logo} alt="Workomate" className="w-7 h-auto" />
-        <span className="text-xl font-medium tracking-tight">Workomate</span>
+        <span className="text-lg sm:text-xl font-medium tracking-tight">Workomate</span>
       </Link>
 
-      <div className="skeu-card p-5 mb-8 max-w-sm w-full">
+      <div className="skeu-card p-4 sm:p-5 mb-6 sm:mb-8 max-w-sm w-full">
         <div className="flex items-start gap-3 mb-4">
-          <MessageSquare className="w-5 h-5 text-foreground mt-1" />
+          <MessageSquare className="w-5 h-5 text-foreground mt-1 shrink-0" />
           <div>
-            <h4 className="text-lg font-medium text-foreground tracking-tight">Let's work together</h4>
-            <p className="text-sm text-muted-foreground mt-0.5 font-normal">Get answers and a customized quote</p>
+            <h4 className="text-base sm:text-lg font-medium text-foreground tracking-tight">Let's work together</h4>
+            <p className="text-xs sm:text-sm text-muted-foreground mt-0.5 font-normal">Get answers and a customized quote</p>
           </div>
         </div>
         <button className="btn-skeu-secondary w-full text-xs">Submit RFP</button>
