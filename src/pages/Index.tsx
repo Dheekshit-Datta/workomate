@@ -5,7 +5,7 @@ import PartnersSection from "@/components/PartnersSection";
 import ProblemSection from "@/components/ProblemSection";
 import HowItWorksSection from "@/components/HowItWorksSection";
 import ServicesSection from "@/components/ServicesSection";
-import HumanInTheLoopSection from "@/components/HumanInTheLoopSection";
+
 import TestimonialsSection from "@/components/TestimonialsSection";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
@@ -24,7 +24,7 @@ const Index = () => {
       <ProblemSection />
       <HowItWorksSection />
       <ServicesSection />
-      <HumanInTheLoopSection />
+      
       <TestimonialsSection />
       <FAQSection />
       <CTASection onBookAudit={openCal} />
