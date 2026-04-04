@@ -1,54 +1,7 @@
-import { useState } from "react";
-import { ArrowRight, TrendingUp, Clock, DollarSign, ArrowLeft } from "lucide-react";
+import { ArrowRight, ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
-
-const caseStudies = [
-  {
-    tag: "Lead Generation",
-    title: "AI-Powered Lead Qualification for a SaaS Company",
-    desc: "Automated the entire lead scoring and qualification pipeline, reducing manual review time by 85% and increasing conversion rates by 32%.",
-    metrics: [
-      { icon: TrendingUp, label: "Conversion Rate", value: "+32%" },
-      { icon: Clock, label: "Time Saved", value: "85%" },
-      { icon: DollarSign, label: "Revenue Impact", value: "+$1.2M" },
-    ],
-    industry: "SaaS / B2B",
-  },
-  {
-    tag: "Operations",
-    title: "Automating Invoice Processing for a Logistics Firm",
-    desc: "Built custom AI agents that process, validate, and route 5,000+ invoices monthly — eliminating data entry errors and cutting processing time from days to minutes.",
-    metrics: [
-      { icon: TrendingUp, label: "Accuracy", value: "99.7%" },
-      { icon: Clock, label: "Processing Time", value: "-94%" },
-      { icon: DollarSign, label: "Annual Savings", value: "$480K" },
-    ],
-    industry: "Logistics",
-  },
-  {
-    tag: "Customer Support",
-    title: "AI Agent Handling Tier-1 Support for an E-Commerce Brand",
-    desc: "Deployed an AI support agent that autonomously resolves 70% of customer tickets — order tracking, returns, FAQs — with human-like context awareness.",
-    metrics: [
-      { icon: TrendingUp, label: "Auto-Resolution", value: "70%" },
-      { icon: Clock, label: "Response Time", value: "<30s" },
-      { icon: DollarSign, label: "Cost Reduction", value: "60%" },
-    ],
-    industry: "E-Commerce",
-  },
-  {
-    tag: "Marketing",
-    title: "Personalized Outreach at Scale for a Consulting Firm",
-    desc: "Created AI workflows that research prospects, draft personalized emails, and schedule follow-ups — resulting in 3x more meetings booked per month.",
-    metrics: [
-      { icon: TrendingUp, label: "Meetings Booked", value: "3x" },
-      { icon: Clock, label: "Outreach Time", value: "-75%" },
-      { icon: DollarSign, label: "Pipeline Growth", value: "+$2.8M" },
-    ],
-    industry: "Consulting",
-  },
-];
+import { caseStudies } from "@/data/caseStudies";
 
 const CaseStudies = () => {
   return (
@@ -57,7 +10,7 @@ const CaseStudies = () => {
       <nav className="fixed w-full z-50 top-0 bg-card/80 backdrop-blur-xl border-b border-border shadow-sm">
         <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2.5 group">
-            <img src={logo} alt="Workomate" className="w-8 h-auto" />
+            <img src={logo} alt="Workomate" className="w-11 h-auto" />
             <span className="text-xl font-medium tracking-tight text-foreground">Workomate</span>
           </Link>
           <Link to="/" className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors text-sm font-medium">
@@ -82,15 +35,18 @@ const CaseStudies = () => {
       <section className="pb-24 px-6">
         <div className="max-w-5xl mx-auto flex flex-col gap-8">
           {caseStudies.map((cs, i) => (
-            <div key={i} className="skeu-container p-8 md:p-10 transition-all hover:shadow-lg">
+            <Link key={i} to={`/case-studies/${cs.slug}`} className="skeu-container p-8 md:p-10 transition-all hover:shadow-lg group block">
               <div className="flex flex-col md:flex-row md:items-start gap-8">
                 <div className="flex-1">
                   <div className="inline-flex items-center px-3 py-1 rounded-full border border-border bg-muted text-xs font-medium text-muted-foreground mb-4 tracking-wide uppercase">
                     {cs.tag}
                   </div>
                   <h2 className="text-2xl md:text-3xl font-medium text-foreground tracking-tight mb-3">{cs.title}</h2>
-                  <p className="text-base text-muted-foreground leading-relaxed mb-2">{cs.desc}</p>
-                  <span className="text-sm text-accent font-medium">Industry: {cs.industry}</span>
+                  <p className="text-base text-muted-foreground leading-relaxed mb-3">{cs.desc}</p>
+                  <span className="text-sm text-accent font-medium mb-4 block">Industry: {cs.industry}</span>
+                  <span className="inline-flex items-center gap-1.5 text-sm font-medium text-accent group-hover:gap-2.5 transition-all">
+                    Read Full Case Study <ArrowRight className="w-4 h-4" />
+                  </span>
                 </div>
 
                 <div className="flex flex-row md:flex-col gap-4 md:gap-5 shrink-0">
@@ -103,7 +59,7 @@ const CaseStudies = () => {
                   ))}
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </section>
