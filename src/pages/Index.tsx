@@ -25,7 +25,6 @@ const Index = () => {
       <HowItWorksSection />
       <ServicesSection />
       
-      <TestimonialsSection />
       <FAQSection />
       <CTASection onBookAudit={openCal} />
       <Footer />
