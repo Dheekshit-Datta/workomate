@@ -20,7 +20,7 @@ const CTASection = ({ onBookAudit }: CTASectionProps) => (
             <span className="text-[10px] sm:text-xs font-medium text-accent tracking-widest uppercase">Free Assessment</span>
           </div>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-normal text-foreground tracking-tight mb-3">Accelerate time-to-value from AI</h2>
-          <p className="text-base sm:text-lg text-muted-foreground font-normal mb-6 sm:mb-8 leading-relaxed">Book a free 45-minute workflow audit. We map your entire ops, show you exactly where AI saves time and money — with zero obligation to proceed.</p>
+          <p className="text-base sm:text-lg text-muted-foreground font-normal mb-6 sm:mb-8 leading-relaxed">Book a free 45-minute workflow audit. We map your entire ops, show you exactly where AI saves time and money, with zero obligation to proceed.</p>
         </div>
         <button onClick={onBookAudit} className="btn-skeu-primary flex items-center gap-2 group-hover:shadow-lg transition-shadow">
           Book a Free Audit <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />

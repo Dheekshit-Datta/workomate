@@ -12,7 +12,7 @@ const CaseStudyDetail = () => {
       <div className="min-h-screen bg-background flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-3xl font-medium text-foreground mb-4">Case study not found</h1>
-          <Link to="/case-studies" className="text-accent hover:underline">← Back to Case Studies</Link>
+          <Link to="/case-studies" className="text-accent hover:underline">Back to Case Studies</Link>
         </div>
       </div>
     );

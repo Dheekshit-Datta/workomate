@@ -21,7 +21,7 @@ const HeroSection = ({ onBookAudit }: HeroSectionProps) => (
     </h1>
 
     <p className="text-base sm:text-lg md:text-xl max-w-2xl text-muted-foreground mb-8 md:mb-10 leading-relaxed font-normal px-2">
-      Built on a proven agent platform. We automate operations, generate leads, and save hours — so your team can focus on growth.
+      Built on a proven agent platform. We automate operations, generate leads, and save hours so your team can focus on growth.
     </p>
 
     <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 w-full sm:w-auto z-10 px-2">
