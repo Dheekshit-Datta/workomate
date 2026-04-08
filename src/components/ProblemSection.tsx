@@ -1,10 +1,10 @@
 import { ArrowRight, UserMinus, FileX, Copy, MessageSquare } from "lucide-react";
 
 const problems = [
-  { icon: UserMinus, title: "Your BDR spends 3 hours/day on LinkedIn research", desc: "Finding prospects, checking their profiles, writing openers — all manually. An AI agent does this in minutes, at 10x the volume." },
+  { icon: UserMinus, title: "Your BDR spends 3 hours/day on LinkedIn research", desc: "Finding prospects, checking their profiles, writing openers, all manually. An AI agent does this in minutes, at 10x the volume." },
   { icon: FileX, title: "You're losing deals to missed follow-ups", desc: "Studies show 80% of sales need 5+ follow-ups. Nobody has time for that. An AI follow-up sequence never forgets, never gets tired." },
   { icon: Copy, title: "Your ops run on copy-pasted spreadsheets", desc: "Pulling data from HubSpot, Sheets, and Slack into one doc every Monday morning is not a strategy. It's a waste of a smart person's time." },
-  { icon: MessageSquare, title: "Support tickets that didn't need a human", desc: "60–70% of inbound queries are routine questions your AI agent could answer in seconds — freeing your team for the work that actually matters." },
+  { icon: MessageSquare, title: "Support tickets that didn't need a human", desc: "60-70% of inbound queries are routine questions your AI agent could answer in seconds, freeing your team for the work that actually matters." },
 ];
 
 const ProblemSection = () => (

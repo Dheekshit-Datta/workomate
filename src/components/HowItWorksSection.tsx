@@ -24,7 +24,7 @@ const HowItWorksSection = () => {
       <div className="max-w-6xl mx-auto">
         <div className="mb-12 md:mb-16 text-center">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-normal text-foreground tracking-tight mb-4">Up and running in 3 steps</h2>
-          <p className="text-base sm:text-xl text-muted-foreground font-normal max-w-2xl mx-auto leading-relaxed">A streamlined process to get your enterprise automated — fast.</p>
+          <p className="text-base sm:text-xl text-muted-foreground font-normal max-w-2xl mx-auto leading-relaxed">A streamlined process to get your enterprise automated, fast.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 relative z-10">
