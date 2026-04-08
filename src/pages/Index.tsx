@@ -1,12 +1,10 @@
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
-import PartnersSection from "@/components/PartnersSection";
+import StatsBar from "@/components/StatsBar";
 import ProblemSection from "@/components/ProblemSection";
 import HowItWorksSection from "@/components/HowItWorksSection";
 import ServicesSection from "@/components/ServicesSection";
-
-
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
@@ -20,11 +18,10 @@ const Index = () => {
     <div className="scroll-smooth overflow-x-hidden">
       <Navbar onBookAudit={openCal} />
       <HeroSection onBookAudit={openCal} />
-      <PartnersSection />
+      <StatsBar />
       <ProblemSection />
       <HowItWorksSection />
       <ServicesSection />
-      
       <FAQSection />
       <CTASection onBookAudit={openCal} />
       <Footer />
