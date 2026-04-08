@@ -14,7 +14,7 @@ const Navbar = ({ onBookAudit }: NavbarProps) => {
     { label: "Services", href: "#services" },
     { label: "How It Works", href: "#how-it-works" },
     { label: "Case Studies", href: "/case-studies", isRoute: true },
-    { label: "Partners", href: "#partners" },
+    
     { label: "FAQ", href: "#faq" },
   ];
 
