@@ -10,16 +10,7 @@ const Footer = () => (
         <span className="text-lg sm:text-xl font-medium tracking-tight">Workomate</span>
       </Link>
 
-      <div className="skeu-card p-4 sm:p-5 mb-6 sm:mb-8 max-w-sm w-full">
-        <div className="flex items-start gap-3 mb-4">
-          <MessageSquare className="w-5 h-5 text-foreground mt-1 shrink-0" />
-          <div>
-            <h4 className="text-base sm:text-lg font-medium text-foreground tracking-tight">Let's talk</h4>
-            <p className="text-xs sm:text-sm text-muted-foreground mt-0.5 font-normal">Book a free discovery call. No forms, no pitch decks.</p>
-          </div>
-        </div>
-        <button className="btn-skeu-secondary w-full text-xs">Book a Free Call</button>
-      </div>
+      <h4 className="text-xs font-medium text-muted-foreground tracking-widest uppercase mb-4">Follow Us On</h4>
 
       <h4 className="text-xs font-medium text-muted-foreground tracking-widest uppercase mb-4">Follow Us On</h4>
       <div className="flex gap-3">
