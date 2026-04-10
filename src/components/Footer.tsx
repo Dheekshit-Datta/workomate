@@ -11,8 +11,6 @@ const Footer = () => (
       </Link>
 
       <h4 className="text-xs font-medium text-muted-foreground tracking-widest uppercase mb-4">Follow Us On</h4>
-
-      <h4 className="text-xs font-medium text-muted-foreground tracking-widest uppercase mb-4">Follow Us On</h4>
       <div className="flex gap-3">
         {[
           { icon: Linkedin, hover: "hover:text-blue-600" },
