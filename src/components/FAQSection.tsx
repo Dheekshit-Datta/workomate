@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Plus } from "lucide-react";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const faqs = [
   { q: "What exactly does Workomate do?", a: "We audit your business workflows, identify tasks that humans shouldn't be doing manually (like data entry, follow-ups), and build custom AI agents to handle those tasks 24/7." },
@@ -15,25 +16,31 @@ const faqs = [
 
 const FAQSection = () => {
   const [openIdx, setOpenIdx] = useState<number | null>(0);
+  const { ref, visible } = useScrollReveal(0.1);
 
   return (
-    <section id="faq" className="py-16 md:py-20 px-4 sm:px-6 bg-card border-b border-border">
-      <div className="max-w-3xl mx-auto skeu-container p-5 sm:p-8 md:p-10">
+    <section id="faq" ref={ref} className="py-16 md:py-20 px-4 sm:px-6 bg-card border-b border-border">
+      <div className={`max-w-3xl mx-auto skeu-container p-5 sm:p-8 md:p-10 transition-all duration-700 ease-out ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"}`}>
         <div className="mb-6 sm:mb-8">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-normal text-foreground tracking-tight">Frequently Asked Questions</h2>
         </div>
 
         <div className="divide-y divide-muted">
           {faqs.map((faq, i) => (
-            <div key={i} className="py-4 sm:py-5 cursor-pointer" onClick={() => setOpenIdx(openIdx === i ? null : i)}>
+            <div
+              key={i}
+              className={`py-4 sm:py-5 cursor-pointer transition-all duration-500 ease-out ${visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-4"}`}
+              style={{ transitionDelay: `${200 + i * 80}ms` }}
+              onClick={() => setOpenIdx(openIdx === i ? null : i)}
+            >
               <div className="text-base sm:text-lg md:text-xl font-medium tracking-tight text-foreground flex justify-between items-center gap-3">
                 <span>{faq.q}</span>
-                <div className={`w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-border shadow-sm flex items-center justify-center shrink-0 transition-colors ${openIdx === i ? "bg-foreground text-card" : "bg-card text-foreground"}`}>
+                <div className={`w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-border shadow-sm flex items-center justify-center shrink-0 transition-all duration-300 ${openIdx === i ? "bg-foreground text-card rotate-0" : "bg-card text-foreground"}`}>
                   <Plus className={`w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-300 ${openIdx === i ? "rotate-45" : ""}`} strokeWidth={1.5} />
                 </div>
               </div>
               <div
-                className={`overflow-hidden transition-all duration-300 ${openIdx === i ? "max-h-40 opacity-100 mt-3 sm:mt-4" : "max-h-0 opacity-0"}`}
+                className={`overflow-hidden transition-all duration-400 ease-out ${openIdx === i ? "max-h-40 opacity-100 mt-3 sm:mt-4" : "max-h-0 opacity-0"}`}
               >
                 <div className="text-sm sm:text-base text-muted-foreground font-normal leading-relaxed pr-8">{faq.a}</div>
               </div>
