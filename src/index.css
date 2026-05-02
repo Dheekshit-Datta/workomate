@@ -91,21 +91,21 @@
     box-shadow: 0 15px 30px rgba(0,0,0,0.15), inset 0 1px 1px rgba(255,255,255,0.1);
   }
 
-  /* Primary button (blue/cyan gradient) */
+  /* Primary button (black skeuomorphic gradient) */
   .btn-skeu-primary {
-    background: linear-gradient(135deg, #007cf0, #00dfd8);
-    border: 1px solid rgba(0, 124, 240, 0.3);
-    box-shadow: 0 4px 15px rgba(0, 124, 240, 0.4), inset 0 1px 1px rgba(255,255,255,0.2);
-    color: #ffffff;
+    background: var(--gradient-btn-primary);
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    box-shadow: var(--shadow-btn-primary);
+    color: hsl(var(--primary-foreground));
     @apply px-5 py-2.5 rounded-xl text-sm font-medium tracking-wider uppercase transition-all duration-300;
   }
   .btn-skeu-primary:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 25px rgba(0, 124, 240, 0.5), 0 0 40px rgba(0, 223, 216, 0.2), inset 0 1px 1px rgba(255,255,255,0.2);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.28), inset 0 1px 1px rgba(255,255,255,0.22), inset 0 -2px 1px rgba(0,0,0,0.5);
   }
   .btn-skeu-primary:active {
-    transform: scale(0.98);
-    box-shadow: inset 0 3px 5px rgba(0,0,0,0.3);
+    transform: translateY(0);
+    box-shadow: inset 0 3px 5px rgba(0,0,0,0.4);
   }
 
   /* Secondary button (light skeuomorphic) */
