@@ -24,8 +24,9 @@ const CaseStudies = () => {
       {/* Hero */}
       <section className="pt-32 pb-16 px-6">
         <div className="max-w-5xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-blue-200 bg-blue-50 shadow-sm mb-6">
-            <span className="text-xs font-medium text-accent tracking-widest uppercase">Case Studies</span>
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-border bg-card shadow-sm mb-6">
+            <span className="w-1.5 h-1.5 rounded-full bg-foreground" />
+            <span className="text-xs font-medium text-foreground tracking-widest uppercase">Case Studies</span>
           </div>
           <h1 className="text-4xl md:text-6xl font-normal text-foreground tracking-tight mb-4">Real results. Real enterprises.</h1>
           <p className="text-xl text-muted-foreground font-normal max-w-2xl mx-auto">See how leading companies use Workomate AI agents to automate operations and drive measurable ROI.</p>
