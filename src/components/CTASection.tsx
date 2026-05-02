@@ -19,9 +19,9 @@ const CTASection = ({ onBookAudit }: CTASectionProps) => {
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-border bg-card shadow-sm mb-4">
               <span className="text-[10px] sm:text-xs font-medium text-foreground tracking-widest uppercase">Now Accepting Q2 2026 Clients — 3 Spots Left</span>
             </div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-blue-200 bg-blue-50 shadow-sm mb-5 sm:mb-6">
-              <Sparkles className="w-3.5 h-3.5 text-accent" strokeWidth={1.5} />
-              <span className="text-[10px] sm:text-xs font-medium text-accent tracking-widest uppercase">Free Assessment</span>
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-border bg-card shadow-sm mb-5 sm:mb-6">
+              <Sparkles className="w-3.5 h-3.5 text-foreground" strokeWidth={1.5} />
+              <span className="text-[10px] sm:text-xs font-medium text-foreground tracking-widest uppercase">Free Assessment</span>
             </div>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-normal text-foreground tracking-tight mb-3">Accelerate time-to-value from AI</h2>
             <p className="text-base sm:text-lg text-muted-foreground font-normal mb-6 sm:mb-8 leading-relaxed">Book a free 45-minute workflow audit. We map your entire ops, show you exactly where AI saves time and money, with zero obligation to proceed.</p>

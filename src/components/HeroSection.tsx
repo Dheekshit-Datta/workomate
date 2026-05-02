@@ -18,9 +18,10 @@ const HeroSection = ({ onBookAudit }: HeroSectionProps) => {
   return (
     <section className="relative pt-28 pb-16 md:pt-40 md:pb-24 px-4 sm:px-6 flex flex-col items-center text-center w-full border-b border-border bg-background bg-[radial-gradient(hsl(214_32%_80%)_1px,transparent_1px)] [background-size:40px_40px] [background-position:center_top]">
       <div
-        className={`inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-blue-200 bg-blue-50 shadow-sm mb-5 md:mb-6 transition-all duration-700 ease-out ${loaded ? "opacity-100 translate-y-0 scale-100" : "opacity-0 -translate-y-4 scale-95"}`}
+        className={`inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-border bg-card shadow-sm mb-5 md:mb-6 transition-all duration-700 ease-out ${loaded ? "opacity-100 translate-y-0 scale-100" : "opacity-0 -translate-y-4 scale-95"}`}
       >
-        <span className="text-[10px] sm:text-xs font-medium text-accent tracking-widest uppercase">Enterprise AI Solutions</span>
+        <span className="w-1.5 h-1.5 rounded-full bg-foreground" />
+        <span className="text-[10px] sm:text-xs font-medium text-foreground tracking-widest uppercase">Enterprise AI Solutions</span>
       </div>
 
       <h1
