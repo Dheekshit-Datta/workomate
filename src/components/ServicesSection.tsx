@@ -1,4 +1,4 @@
-import { CalendarCheck } from "lucide-react";
+import { CalendarCheck, Headphones, Workflow, Zap, CheckCircle2 } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const ServicesSection = () => {
@@ -93,6 +93,87 @@ const ServicesSection = () => {
                       }}
                     />
                   ))}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Customer Support Card */}
+          <div className={`skeu-card p-5 sm:p-6 flex flex-col transition-all duration-700 ease-out hover:-translate-y-1 hover:shadow-lg ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"}`} style={{ transitionDelay: "600ms" }}>
+            <h3 className="text-lg sm:text-xl font-medium tracking-tight mb-2 text-foreground">
+              AI for <span className="text-accent">Customer Support</span>
+            </h3>
+            <p className="text-sm sm:text-base text-muted-foreground font-normal leading-relaxed mb-4 sm:mb-5">
+              Resolve tickets in seconds with voice & chat agents that work 24/7, no hold time.
+            </p>
+            <div className="flex gap-3 mb-5 sm:mb-6">
+              <a href="#case-studies" className="btn-skeu-primary text-xs px-4 py-2 flex items-center gap-2">
+                Learn More <span className="w-1 h-1 rounded-full bg-primary-foreground/70" />
+              </a>
+            </div>
+            <div className="bg-muted/50 rounded-xl p-3 sm:p-4 flex-grow flex items-center justify-center border border-muted shadow-[inset_0_2px_8px_rgba(0,0,0,0.02)]">
+              <div className="bg-card rounded-xl shadow-sm border border-border p-3 sm:p-4 w-full max-w-sm">
+                <div className="flex items-center justify-between mb-3 border-b border-muted pb-3">
+                  <div className="flex items-center gap-2">
+                    <div className="w-7 h-7 rounded-full bg-foreground flex items-center justify-center">
+                      <Headphones className="w-3.5 h-3.5 text-background" strokeWidth={1.75} />
+                    </div>
+                    <span className="text-xs sm:text-sm font-medium text-foreground tracking-tight">Aria · Voice Agent</span>
+                  </div>
+                  <span className="text-[10px] text-emerald-700 bg-emerald-50 border border-emerald-100 px-2 py-0.5 rounded-full font-medium">Live</span>
+                </div>
+                <div className="space-y-2 text-xs">
+                  <div className="flex items-center gap-2 text-muted-foreground"><CheckCircle2 className="w-3.5 h-3.5 text-accent" strokeWidth={2} /> Booking confirmed · Room 412</div>
+                  <div className="flex items-center gap-2 text-muted-foreground"><CheckCircle2 className="w-3.5 h-3.5 text-accent" strokeWidth={2} /> Housekeeping dispatched</div>
+                  <div className="flex items-center gap-2 text-muted-foreground"><CheckCircle2 className="w-3.5 h-3.5 text-accent" strokeWidth={2} /> Resolved in 38 seconds</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Operations Card */}
+          <div className={`skeu-card p-5 sm:p-6 flex flex-col transition-all duration-700 ease-out hover:-translate-y-1 hover:shadow-lg ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"}`} style={{ transitionDelay: "800ms" }}>
+            <h3 className="text-lg sm:text-xl font-medium tracking-tight mb-2 text-foreground">
+              AI for <span className="text-accent">Operations</span>
+            </h3>
+            <p className="text-sm sm:text-base text-muted-foreground font-normal leading-relaxed mb-4 sm:mb-5">
+              Automate repetitive back-office workflows, data entry, reporting, and approvals end-to-end.
+            </p>
+            <div className="flex gap-3 mb-5 sm:mb-6">
+              <a href="#case-studies" className="btn-skeu-primary text-xs px-4 py-2 flex items-center gap-2">
+                Learn More <span className="w-1 h-1 rounded-full bg-primary-foreground/70" />
+              </a>
+            </div>
+            <div className="bg-muted/50 rounded-xl p-3 sm:p-4 flex-grow flex items-center justify-center border border-muted shadow-[inset_0_2px_8px_rgba(0,0,0,0.02)]">
+              <div className="bg-card rounded-xl shadow-sm border border-border p-3 sm:p-4 w-full max-w-sm">
+                <div className="flex items-center justify-between mb-3 pb-3 border-b border-muted">
+                  <span className="text-xs sm:text-sm font-medium text-foreground tracking-tight flex items-center gap-1.5">
+                    <Workflow className="w-3.5 h-3.5 text-accent" strokeWidth={1.75} /> Pipeline Status
+                  </span>
+                  <span className="text-[10px] font-medium text-foreground bg-muted px-2 py-0.5 rounded-full border border-border">+128 tasks/day</span>
+                </div>
+                <div className="space-y-2.5">
+                  {[
+                    { label: "Invoice intake", pct: 100 },
+                    { label: "Approval routing", pct: 86 },
+                    { label: "Ledger sync", pct: 64 },
+                  ].map((row, i) => (
+                    <div key={row.label}>
+                      <div className="flex justify-between text-[11px] text-muted-foreground mb-1">
+                        <span>{row.label}</span>
+                        <span className="text-foreground font-medium">{row.pct}%</span>
+                      </div>
+                      <div className="h-1.5 w-full bg-muted rounded-full overflow-hidden">
+                        <div
+                          className="h-full bg-foreground rounded-full transition-all duration-1000 ease-out"
+                          style={{ width: visible ? `${row.pct}%` : "0%", transitionDelay: `${900 + i * 200}ms` }}
+                        />
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                <div className="mt-3 flex items-center gap-1.5 text-[10px] text-muted-foreground">
+                  <Zap className="w-3 h-3 text-accent" strokeWidth={2} /> Running on Trigger.dev · 24/7
                 </div>
               </div>
             </div>
