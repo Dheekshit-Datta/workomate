@@ -38,7 +38,7 @@ const CalModal = ({ isOpen, onClose }: CalModalProps) => {
         </button>
         <iframe
           ref={iframeRef}
-          src={isOpen ? "https://cal.com/dheekshit/30-min-meeting" : undefined}
+          src={isOpen ? "https://cal.com/automisebiz/30min" : undefined}
           className="w-full h-full border-0"
           title="Book a Call"
         />

@@ -26,8 +26,8 @@ const Index = () => {
       <ProblemSection />
       <HowItWorksSection />
       <ServicesSection />
-      <CalendarSection />
       <FAQSection />
+      <CalendarSection />
       <CTASection onBookAudit={openCal} />
       <Footer />
       <CalModal isOpen={calOpen} onClose={() => setCalOpen(false)} />
