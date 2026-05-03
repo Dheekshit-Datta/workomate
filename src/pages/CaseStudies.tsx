@@ -29,7 +29,7 @@ const CaseStudies = () => {
             <span className="text-xs font-medium text-foreground tracking-widest uppercase">Case Studies</span>
           </div>
           <h1 className="text-4xl md:text-6xl font-normal text-foreground tracking-tight mb-4">Real results. Real enterprises.</h1>
-          <p className="text-xl text-muted-foreground font-normal max-w-2xl mx-auto">See how leading companies use Workomate AI agents to automate operations and drive measurable ROI.</p>
+          <p className="text-xl text-muted-foreground font-normal max-w-2xl mx-auto">See how leading companies use automisebiz AI agents to automate operations and drive measurable ROI.</p>
         </div>
       </section>
 

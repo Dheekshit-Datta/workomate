@@ -143,7 +143,7 @@ const ChatWidget = () => {
                 <span className="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-emerald-400 ring-2 ring-[#1a1a1a]" />
               </div>
               <div className="flex flex-col leading-tight">
-                <span className="text-sm font-medium text-white tracking-tight">Workomate AI</span>
+                <span className="text-sm font-medium text-white tracking-tight">automisebiz AI</span>
                 <span className="text-[10px] text-white/50 tracking-wider uppercase">Online · Replies instantly</span>
               </div>
             </div>
@@ -205,7 +205,7 @@ const ChatWidget = () => {
               </button>
             </form>
             <div className="flex items-center justify-center gap-1.5 mt-2 text-[10px] text-white/30 tracking-wider uppercase">
-              <Sparkles className="w-2.5 h-2.5" /> Powered by Workomate
+              <Sparkles className="w-2.5 h-2.5" /> Powered by automisebiz
             </div>
           </div>
         </div>
