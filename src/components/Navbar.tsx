@@ -19,11 +19,11 @@ const Navbar = ({ onBookAudit }: NavbarProps) => {
   ];
 
   return (
-    <nav className="fixed w-full z-50 top-0 bg-card/80 backdrop-blur-xl border-b border-border shadow-sm transition-all duration-300">
+    <nav className="fixed w-full z-50 top-0 bg-card/40 backdrop-blur-xl border-b border-border/60 shadow-sm transition-all duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-2.5 sm:py-3 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2 sm:gap-2.5 group">
-          <img src={logo} alt="Workomate" className="w-12 sm:w-14 h-auto" />
-          <span className="text-lg sm:text-xl font-medium tracking-tight text-foreground">Workomate</span>
+          <img src={logo} alt="automisebiz" className="w-9 sm:w-10 h-auto" />
+          <span className="font-brand text-lg sm:text-xl text-foreground lowercase">automisebiz</span>
         </Link>
 
         <div className="hidden lg:flex items-center gap-8">
@@ -54,7 +54,7 @@ const Navbar = ({ onBookAudit }: NavbarProps) => {
       </div>
 
       {mobileOpen && (
-        <div className="lg:hidden bg-card border-t border-border px-4 sm:px-6 py-4 flex flex-col gap-4">
+        <div className="lg:hidden bg-card/90 backdrop-blur-xl border-t border-border px-4 sm:px-6 py-4 flex flex-col gap-4">
           {navItems.map((item) =>
             item.isRoute ? (
               <Link key={item.label} to={item.href} className="text-base text-muted-foreground hover:text-foreground transition-colors" onClick={() => setMobileOpen(false)}>

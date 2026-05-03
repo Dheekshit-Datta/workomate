@@ -6,8 +6,8 @@ const Footer = () => (
   <footer className="pt-12 sm:pt-16 pb-12 sm:pb-16 px-4 sm:px-6 bg-card">
     <div className="max-w-6xl mx-auto flex flex-col items-start">
       <Link to="/" className="flex items-center gap-2 mb-6 sm:mb-8 text-foreground">
-        <img src={logo} alt="Workomate" className="w-7 h-auto" />
-        <span className="text-lg sm:text-xl font-medium tracking-tight">Workomate</span>
+        <img src={logo} alt="automisebiz" className="w-7 h-auto" />
+        <span className="font-brand text-lg sm:text-xl lowercase">automisebiz</span>
       </Link>
 
       <h4 className="text-xs font-medium text-muted-foreground tracking-widest uppercase mb-4">Follow Us On</h4>

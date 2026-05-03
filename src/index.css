@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Jost:wght@700;800;900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -9,15 +9,15 @@
     --font-sans: 'Manrope', sans-serif;
 
     --background: 210 33% 98%;
-    --foreground: 0 0% 0%;
+    --foreground: 0 0% 8%;
 
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 0%;
+    --card-foreground: 0 0% 8%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 0%;
+    --popover-foreground: 0 0% 8%;
 
-    --primary: 0 0% 4%;
+    --primary: 0 0% 8%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 210 20% 95%;
@@ -34,7 +34,7 @@
 
     --border: 214 32% 91%;
     --input: 214 32% 91%;
-    --ring: 0 0% 4%;
+    --ring: 0 0% 8%;
 
     --radius: 0.75rem;
 
@@ -46,9 +46,9 @@
     --shadow-elevated: 0 15px 30px -10px rgba(0,0,0,0.05);
 
     --gradient-card: linear-gradient(to bottom, #ffffff, #f4f7f9);
-    --gradient-btn-primary: linear-gradient(to bottom, #3a3a3a, #0a0a0a);
+    --gradient-btn-primary: linear-gradient(to bottom, #2a2a2a, #141414);
     --gradient-btn-secondary: linear-gradient(to bottom, #ffffff, #e8ecef);
-    --gradient-dark-card: linear-gradient(to bottom, #222222, #0a0a0a);
+    --gradient-dark-card: linear-gradient(to bottom, #2a2a2a, #141414);
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -151,5 +151,12 @@
     border: 1px solid hsl(214 32% 80%);
     box-shadow: var(--shadow-btn-secondary);
     color: hsl(var(--foreground));
+  }
+
+  /* Brand wordmark — Avant Garde Gothic Bold style (Jost is the closest free geometric match) */
+  .font-brand {
+    font-family: 'Jost', 'ITC Avant Garde Gothic', sans-serif;
+    font-weight: 800;
+    letter-spacing: -0.01em;
   }
 }

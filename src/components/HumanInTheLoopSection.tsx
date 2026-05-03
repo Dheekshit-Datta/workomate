@@ -3,7 +3,7 @@ import { Database, Bot, CheckCircle2, Zap, Brain, Users, FileText, Target } from
 
 const nodes = [
   { icon: Database, label: "Enterprise Context", sub: "Rules & Data", dark: false },
-  { icon: Bot, label: "Workomate AI", sub: "Reasoning Engine", dark: true },
+  { icon: Bot, label: "automisebiz AI", sub: "Reasoning Engine", dark: true },
   { icon: CheckCircle2, label: "Autonomous Action", sub: "Task Completed", dark: false, iconColor: "text-green-500" },
 ];
 

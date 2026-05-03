@@ -3,7 +3,7 @@ import { Plus } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const faqs = [
-  { q: "What exactly does Workomate do?", a: "We audit your business workflows, identify tasks that humans shouldn't be doing manually (like data entry, follow-ups), and build custom AI agents to handle those tasks 24/7." },
+  { q: "What exactly does automisebiz do?", a: "We audit your business workflows, identify tasks that humans shouldn't be doing manually (like data entry, follow-ups), and build custom AI agents to handle those tasks 24/7." },
   { q: "How long does it take to set up?", a: "Most standard workflows are deployed within 2 to 4 weeks. Complex enterprise setups may take 6 to 8 weeks. We map out a strict timeline during our initial audit." },
   { q: "Do I need technical knowledge?", a: "Zero. We handle everything from technical architecture to implementation. We deliver a finished system that works in the background, with a dashboard for monitoring." },
   { q: "What kind of tasks can your AI agents automate?", a: "Anything repetitive and rule-based: data entry, invoice processing, customer follow-ups, report generation, lead qualification, scheduling, and more. If a human can follow a process to do it, our AI can too." },

@@ -17,7 +17,7 @@ const CalendarSection = () => {
         </p>
         <div className={`w-full rounded-2xl overflow-hidden skeu-card transition-all duration-700 ease-out delay-[450ms] ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
           <iframe
-            src="https://cal.com/dheekshit/30-min-meeting"
+            src="https://cal.com/automisebiz/30min"
             className="w-full border-0"
             style={{ height: "700px" }}
             title="Book a Strategy Call"

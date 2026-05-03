@@ -16,7 +16,7 @@ const TestimonialsSection = () => {
         <div className={`flex flex-col md:flex-row justify-between items-start md:items-end mb-10 md:mb-12 gap-4 md:gap-6 transition-all duration-700 ease-out ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
           <div>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-normal text-foreground tracking-tight mb-3">Customer testimonials</h2>
-            <p className="text-base sm:text-lg text-muted-foreground font-normal">Discover how organizations deliver AI value with Workomate.</p>
+            <p className="text-base sm:text-lg text-muted-foreground font-normal">Discover how organizations deliver AI value with automisebiz.</p>
           </div>
         </div>
 
