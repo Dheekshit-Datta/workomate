@@ -1,14 +1,17 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 interface HeroSectionProps {
   onBookAudit: () => void;
 }
 
-const heroCards = [
-  { title: "Pre-built Systems", desc: "Use systems for Banking, Healthcare, Lead Gen, and Management today." },
-  { title: "System Accelerators", desc: "Leverage our Marketplace of pre-built AI agents, templates, and integrations." },
-  { title: "Tailored Systems", desc: "Design and build systems on our Agent Platform across enterprise use cases." },
+const workflowSteps = [
+  "Lead scraped",
+  "Enriched",
+  "Scored",
+  "Personalized email",
+  "Booked call",
 ];
 
 const HeroSection = ({ onBookAudit }: HeroSectionProps) => {
@@ -27,30 +30,55 @@ const HeroSection = ({ onBookAudit }: HeroSectionProps) => {
       <h1
         className={`text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-normal text-foreground tracking-tight leading-[1.1] max-w-4xl mb-5 md:mb-6 drop-shadow-sm transition-all duration-700 ease-out delay-150 ${loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
       >
-        Agentic AI systems<br />for fast-growing businesses
+        We build AI agents that automate lead gen, support, and operations
       </h1>
 
       <p
         className={`text-base sm:text-lg md:text-xl max-w-2xl text-muted-foreground mb-8 md:mb-10 leading-relaxed font-normal px-2 transition-all duration-700 ease-out delay-300 ${loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
       >
-        Built on a proven agent platform. We automate operations, generate leads, and save hours so your team can focus on growth.
+        For growing businesses that need more booked calls, faster support, and cleaner operations without adding more manual work.
       </p>
 
       <div className={`flex flex-col sm:flex-row items-center gap-3 sm:gap-4 w-full sm:w-auto z-10 px-2 transition-all duration-700 ease-out delay-[450ms] ${loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}>
         <button onClick={onBookAudit} className="btn-skeu-primary w-full sm:w-auto px-6 py-3 text-base flex items-center justify-center gap-2">
           Book a Free Audit <ArrowRight className="w-4 h-4" />
         </button>
-        <a href="#case-studies" className="btn-skeu-secondary w-full sm:w-auto px-6 py-3 text-base flex items-center justify-center">
+        <Link to="/case-studies" className="btn-skeu-secondary w-full sm:w-auto px-6 py-3 text-base flex items-center justify-center">
           Case Studies
-        </a>
+        </Link>
       </div>
 
-      <div className="mt-12 md:mt-20 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 w-full max-w-6xl text-left px-1">
-        {heroCards.map((card, i) => (
+      <div className={`mt-10 md:mt-14 w-full max-w-5xl px-1 transition-all duration-700 ease-out delay-[600ms] ${loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
+        <div className="skeu-container p-4 sm:p-5">
+          <div className="grid grid-cols-1 sm:grid-cols-5 gap-3">
+            {workflowSteps.map((step, i) => (
+              <div key={step} className="relative flex sm:flex-col items-center sm:items-start gap-3 rounded-xl border border-border bg-card/70 px-4 py-3 text-left">
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-foreground text-primary-foreground shadow-sm">
+                  <CheckCircle2 className="h-4 w-4" strokeWidth={1.8} />
+                </div>
+                <div>
+                  <div className="text-[10px] font-medium uppercase tracking-widest text-muted-foreground">Step {i + 1}</div>
+                  <div className="text-sm sm:text-base font-medium tracking-tight text-foreground">{step}</div>
+                </div>
+                {i < workflowSteps.length - 1 && (
+                  <ArrowRight className="hidden sm:block absolute -right-2 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="mt-6 md:mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 w-full max-w-6xl text-left px-1">
+        {[
+          { title: "AI Lead Gen System", desc: "Find, enrich, qualify, and write first-touch outreach for your best-fit prospects." },
+          { title: "AI Voice & Support Agent", desc: "Answer common customer calls and chats, log requests, and escalate edge cases." },
+          { title: "AI Ops Automation", desc: "Turn spreadsheets, approvals, reporting, and tool handoffs into reliable workflows." },
+        ].map((card, i) => (
           <div
             key={card.title}
             className={`skeu-card p-5 sm:p-6 group cursor-pointer flex flex-col justify-between min-h-[140px] sm:min-h-[160px] hover:-translate-y-1 hover:shadow-lg transition-all duration-500 ease-out ${loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
-            style={{ transitionDelay: `${600 + i * 150}ms` }}
+            style={{ transitionDelay: `${750 + i * 150}ms` }}
           >
             <div>
               <h3 className="text-lg sm:text-xl font-medium tracking-tight text-foreground mb-2 flex items-center justify-between">

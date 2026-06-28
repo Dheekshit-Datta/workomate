@@ -9,7 +9,7 @@ const faqs = [
   { q: "What kind of tasks can your AI agents automate?", a: "Anything repetitive and rule-based: data entry, invoice processing, customer follow-ups, report generation, lead qualification, scheduling, and more. If a human can follow a process to do it, our AI can too." },
   { q: "How do you ensure data security?", a: "We follow enterprise-grade security protocols including end-to-end encryption, SOC 2 compliance readiness, and strict access controls. Your data never leaves your approved infrastructure." },
   { q: "What's the pricing model?", a: "We offer flexible pricing based on the number of workflows automated and their complexity. Every engagement starts with a free audit so you know exactly what you're investing in before committing." },
-  { q: "Can your AI agents integrate with our existing tools?", a: "Absolutely. We integrate with all major platforms — Salesforce, HubSpot, Slack, Google Workspace, Microsoft 365, SAP, and hundreds more via APIs." },
+  { q: "Can your AI agents integrate with our existing tools?", a: "Absolutely. We integrate with all major platforms: Salesforce, HubSpot, Slack, Google Workspace, Microsoft 365, SAP, and hundreds more via APIs." },
   { q: "What happens if the AI makes a mistake?", a: "Our systems include built-in guardrails, validation checks, and human-in-the-loop escalation for edge cases. You get full visibility and can set approval thresholds for sensitive operations." },
   { q: "Do you offer ongoing support after deployment?", a: "Yes. Every client gets dedicated support, performance monitoring, and continuous optimization. We treat your AI agents as living systems that improve over time." },
 ];

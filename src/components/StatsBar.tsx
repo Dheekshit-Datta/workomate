@@ -3,7 +3,7 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 const stats = [
   { value: "3x", label: "Meetings Booked Per Month" },
   { value: "90%", label: "Manual Research Eliminated" },
-  { value: "2–4 Weeks", label: "Average Time to Deploy" },
+  { value: "2-4 Weeks", label: "Average Time to Deploy" },
   { value: "Zero", label: "Tech Knowledge Required" },
 ];
 
