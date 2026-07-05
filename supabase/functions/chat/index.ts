@@ -29,7 +29,7 @@ serve(async (req) => {
 Key things you know:
 - automisebiz builds agentic AI systems for fast-growing businesses
 - Services include AI sales agents, voice agents, workflow automation
-- They offer a free 45-minute workflow audit
+- They offer a free 30-minute workflow audit
 - Average deployment time is 2 to 4 weeks
 - No tech knowledge required from clients
 - They automate operations, generate leads, and save hundreds of hours

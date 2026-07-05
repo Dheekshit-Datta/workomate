@@ -69,15 +69,6 @@ const ChatWidget = () => {
   const [showPulse, setShowPulse] = useState(true);
   const endRef = useRef<HTMLDivElement>(null);
 
-  // Auto-popup after 6 seconds
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setOpen(true);
-      setShowPulse(false);
-    }, 6000);
-    return () => clearTimeout(timer);
-  }, []);
-
   useEffect(() => {
     endRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
@@ -144,7 +135,7 @@ const ChatWidget = () => {
               </div>
               <div className="flex flex-col leading-tight">
                 <span className="text-sm font-medium text-white tracking-tight">automisebiz AI</span>
-                <span className="text-[10px] text-white/50 tracking-wider uppercase">Online · Replies instantly</span>
+                <span className="text-[10px] text-white/50 tracking-wider uppercase">Online - Replies instantly</span>
               </div>
             </div>
             <button onClick={() => setOpen(false)} aria-label="Close chat" className="text-white/60 hover:text-white transition-colors p-1 rounded-md hover:bg-white/5">
@@ -192,7 +183,7 @@ const ChatWidget = () => {
               <input
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
-                placeholder="Ask about AI automation…"
+                placeholder="Ask about AI automation..."
                 className="flex-1 bg-transparent text-sm text-white placeholder:text-white/40 focus:outline-none"
               />
               <button
