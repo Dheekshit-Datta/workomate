@@ -1,4 +1,4 @@
-import { BadgeDollarSign, Code2, ShieldCheck, UserRound } from "lucide-react";
+import { Code2, Route, ShieldCheck, UserRound } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 interface FounderPricingSectionProps {
@@ -41,15 +41,15 @@ const FounderPricingSection = ({ onBookAudit }: FounderPricingSectionProps) => {
         <div className="skeu-card-dark p-6 sm:p-8 md:p-10 flex flex-col justify-between">
           <div>
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 mb-5">
-              <BadgeDollarSign className="w-4 h-4 text-white/70" strokeWidth={1.5} />
-              <span className="text-xs font-medium text-white/70 tracking-widest uppercase">Pricing Guidance</span>
+              <Route className="w-4 h-4 text-white/70" strokeWidth={1.5} />
+              <span className="text-xs font-medium text-white/70 tracking-widest uppercase">Scoped Build Plan</span>
             </div>
-            <h2 className="text-2xl sm:text-3xl font-normal tracking-tight text-primary-foreground mb-3">Projects usually start from $2,500</h2>
+            <h2 className="text-2xl sm:text-3xl font-normal tracking-tight text-primary-foreground mb-3">Start with the workflow, not the invoice</h2>
             <p className="text-base sm:text-lg text-white/55 leading-relaxed mb-6">
-              Final pricing depends on workflow complexity, integrations, data sources, and support needs. The audit gives you a scoped first build before you commit.
+              The audit maps your highest-leverage process, identifies what should be automated, and gives you a clear first build before you commit.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-8">
-              {["Audit", "Build", "Launch"].map((step, i) => (
+              {["Map", "Scope", "Launch"].map((step, i) => (
                 <div key={step} className="rounded-xl border border-white/10 bg-white/[0.04] p-4">
                   <div className="mb-2 flex h-7 w-7 items-center justify-center rounded-full bg-white text-black text-xs font-semibold">{i + 1}</div>
                   <div className="text-sm font-medium text-white">{step}</div>
