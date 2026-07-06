@@ -21,9 +21,9 @@ const Navbar = ({ onBookAudit }: NavbarProps) => {
   return (
     <nav className="fixed w-full z-50 top-0 bg-card/40 backdrop-blur-xl border-b border-border/60 shadow-sm transition-all duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-2.5 sm:py-3 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-1 sm:gap-1.5 group">
-          <img src={logo} alt="automisebiz" className="w-12 sm:w-14 h-auto" />
-          <span className="text-lg sm:text-xl font-medium tracking-tight text-foreground lowercase">automisebiz</span>
+        <Link to="/" className="flex items-center gap-1.5 sm:gap-2 group">
+          <img src={logo} alt="automisebiz" className="w-10 sm:w-11 h-auto" />
+          <span className="text-lg sm:text-xl font-normal tracking-tight text-foreground lowercase">automisebiz</span>
         </Link>
 
         <div className="hidden lg:flex items-center gap-8">
