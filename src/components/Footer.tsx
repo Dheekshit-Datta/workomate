@@ -12,7 +12,7 @@ const Footer = () => (
   <footer className="pt-12 sm:pt-16 pb-12 sm:pb-16 px-4 sm:px-6 bg-card">
     <div className="max-w-6xl mx-auto flex flex-col items-start">
       <Link to="/" className="flex items-center gap-2 mb-6 sm:mb-8 text-foreground">
-        <img src={logo} alt="automisebiz" className="w-7 h-auto" />
+        <img src={logo} alt="automisebiz" className="h-8 w-auto" />
         <span className="text-lg sm:text-xl font-normal tracking-tight lowercase">automisebiz</span>
       </Link>
 
