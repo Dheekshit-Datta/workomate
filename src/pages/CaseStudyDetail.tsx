@@ -1,7 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import { ArrowLeft, ArrowRight, CheckCircle2 } from "lucide-react";
 import ReactMarkdown from "react-markdown";
-import logo from "@/assets/brand-mark.png";
+import logo from "@/assets/nav-logo.png";
 import { caseStudies } from "@/data/caseStudies";
 
 const CaseStudyDetail = () => {

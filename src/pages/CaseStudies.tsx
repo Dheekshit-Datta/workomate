@@ -1,6 +1,6 @@
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import logo from "@/assets/brand-mark.png";
+import logo from "@/assets/nav-logo.png";
 import { caseStudies } from "@/data/caseStudies";
 
 const CaseStudies = () => {

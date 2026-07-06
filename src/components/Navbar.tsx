@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
-import logo from "@/assets/brand-mark.png";
+import logo from "@/assets/nav-logo.png";
 
 interface NavbarProps {
   onBookAudit: () => void;
@@ -22,7 +22,7 @@ const Navbar = ({ onBookAudit }: NavbarProps) => {
     <nav className="fixed w-full z-50 top-0 bg-card/40 backdrop-blur-xl border-b border-border/60 shadow-sm transition-all duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-2.5 sm:py-3 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-1.5 sm:gap-2 group">
-          <img src={logo} alt="automisebiz" className="w-8 sm:w-9 h-auto" />
+          <img src={logo} alt="automisebiz" className="w-10 sm:w-11 h-auto" />
           <span className="text-lg sm:text-xl font-normal tracking-tight text-foreground lowercase">automisebiz</span>
         </Link>
 
